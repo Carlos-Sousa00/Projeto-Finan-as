@@ -1,6 +1,8 @@
+using Financa.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddTransient<PessoaRepository>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
