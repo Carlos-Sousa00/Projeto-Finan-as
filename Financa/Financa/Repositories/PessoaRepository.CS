@@ -6,14 +6,14 @@ namespace Financa.Repositories
 {
     public class PessoaRepository
     {
-        public async Task<IEnumerable<Pessoa>> GetAllPessoaAsync()
+        public async Task<IList<Pessoa>> GetAllPessoaAsync()
         {
             using (var connection = ConnectionSql.GetConnection())
             {
                 await connection.OpenAsync();
                 var pessoas = await connection.QueryAsync<Pessoa>(
-                    "SELECT Nome, Sobrenome, CPF, Salario FROM Pessoa");
-                return pessoas;
+                    "SELECT Nome, Sobrenome FROM Pessoa");
+                return pessoas.ToList();
             }
         }
     }
