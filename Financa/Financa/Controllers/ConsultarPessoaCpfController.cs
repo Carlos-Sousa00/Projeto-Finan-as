@@ -23,16 +23,17 @@ namespace Financa.Controllers
             try
             {
                 var pessoa = await _pessoaRepository.GetPessoaAsync(cpf);
-                return Ok(pessoa);
+                return Ok(pessoa); 
             }
-            catch (CpfNaoCadastradoException)
+            catch (Pessoa.CpfNaoCadastradoException)
             {
-                return NotFound(new { Mensagem = "CPF não cadastrado." });
+                return NotFound(new { Mensagem = $"CPF {cpf} não cadastrado." });
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new { Mensagem = "Erro interno no servidor.", Detalhes = ex.Message });
             }
         }
+
     }
 }

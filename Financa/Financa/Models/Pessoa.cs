@@ -3,6 +3,14 @@ using Financa.ConnectionSqls;
 
 namespace Financa.Models
 {
+    public class PessoaDto
+    {
+        public string Nome { get; set; }
+        public string Sobrenome { get; set; }
+        public string CPF { get; set; }
+        public float Salario { get; set; }
+    }
+
     public class Pessoa
     {
         public string Nome { get; set; }
@@ -20,44 +28,15 @@ namespace Financa.Models
             Salario = salario;
         }
 
-        public Pessoa (string cpf)
+        public PessoaDto ToDto()
         {
-            CPF = cpf;
-            Salario = ObterSalarioPeloCPF(cpf);
-            Nome = ObterNomePeloCPF(cpf);
-            Sobrenome = ObterSobrenomePeloCPF (cpf);
-        }
-        private float ObterSalarioPeloCPF(string cpf)
-        {
-                using (var connection = ConnectionSql.GetConnection())
-                {
-                    connection.Open();
-                    string sql = "SELECT Salario from Pessoa WHERE CPF = @cpf";
-                    var salario = connection.QuerySingleOrDefault<float>(sql,new { CPF = cpf });
-                    return salario;
-                }
-        }
-
-        private string ObterNomePeloCPF(string cpf)
-        {
-            using (var connection = ConnectionSql.GetConnection())
+            return new PessoaDto
             {
-                connection.Open();
-                string sql = "SELECT Nome from Pessoa WHERE CPF = @cpf";
-                var nome = connection.QuerySingleOrDefault<string>(sql, new { CPF = cpf });
-                return nome;
-            }
-        }
-
-        private string ObterSobrenomePeloCPF(string cpf)
-        {
-            using (var connection = ConnectionSql.GetConnection())
-            {
-                connection.Open();
-                string sql = "SELECT Sobrenome from Pessoa WHERE CPF = @cpf";
-                var sobrenome = connection.QuerySingleOrDefault<string>(sql, new { CPF = cpf });
-                return sobrenome;
-            }
+                Nome = this.Nome,
+                Sobrenome = this.Sobrenome,
+                CPF = this.CPF,
+                Salario = this.Salario
+            };
         }
 
         public class CpfNaoCadastradoException : Exception
@@ -65,6 +44,5 @@ namespace Financa.Models
             public CpfNaoCadastradoException(string cpf)
                 : base($"CPF '{cpf}' não cadastrado.") { }
         }
-
     }
 }
