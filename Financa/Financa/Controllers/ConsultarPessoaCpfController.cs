@@ -23,7 +23,7 @@ namespace Financa.Controllers
             try
             {
                 var pessoa = await _pessoaRepository.GetPessoaAsync(cpf);
-                return Ok(pessoa); 
+                return Ok(pessoa);
             }
             catch (Pessoa.CpfNaoCadastradoException)
             {

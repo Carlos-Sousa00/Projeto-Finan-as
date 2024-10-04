@@ -9,6 +9,7 @@
       "Financa/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
+          "DocsBRValidator": "1.3.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
           "Swashbuckle.AspNetCore": "6.4.0",
@@ -23,6 +24,14 @@
           "lib/net7.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.1.35.13827"
+          }
+        }
+      },
+      "DocsBRValidator/1.3.2": {
+        "runtime": {
+          "lib/net6.0/DocumentValidator.dll": {
+            "assemblyVersion": "1.3.2.0",
+            "fileVersion": "1.3.2.0"
           }
         }
       },
@@ -211,6 +220,13 @@
       "sha512": "sha512-YKRwjVfrG7GYOovlGyQoMvr1/IJdn+7QzNXJxyMh0YfFF5yvDmTYaJOVYWsckreNjGsGSEtrMTpnzxTUq/tZQw==",
       "path": "dapper/2.1.35",
       "hashPath": "dapper.2.1.35.nupkg.sha512"
+    },
+    "DocsBRValidator/1.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CuaASkVtw+zZKNWfaxhCFG4S6xBMY+vw2xfQSd9azRRI05Oiw88Rp2TR1ALBK5LwKbOODKxXBL1EbvViKtKlwA==",
+      "path": "docsbrvalidator/1.3.2",
+      "hashPath": "docsbrvalidator.1.3.2.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
