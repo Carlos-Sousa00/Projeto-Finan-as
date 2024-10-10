@@ -1,16 +1,5 @@
-﻿using Dapper;
-using Financa.ConnectionSqls;
-
-namespace Financa.Models
+﻿namespace Financa.Models
 {
-    public class PessoaDto
-    {
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
-        public string CPF { get; set; }
-        public float Salario { get; set; }
-    }
-
     public class Pessoa
     {
         public string Nome { get; set; }
@@ -28,15 +17,14 @@ namespace Financa.Models
             Salario = salario;
         }
 
-        public PessoaDto ToDto()
+        public string GetCpf()
         {
-            return new PessoaDto
-            {
-                Nome = this.Nome,
-                Sobrenome = this.Sobrenome,
-                CPF = this.CPF,
-                Salario = this.Salario
-            };
+            return CPF;
+        }
+
+        public float GetSalario()
+        {
+            return Salario;
         }
 
         public class CpfNaoCadastradoException : Exception

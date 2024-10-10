@@ -1,9 +1,11 @@
 ﻿using Financa.Models;
 using Financa.Repositories;
+using Financa.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financa.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class InserirPessoaController : ControllerBase
@@ -16,10 +18,16 @@ namespace Financa.Controllers
         }
 
         [HttpPost]
-        public IActionResult InserirPessoa([FromBody] PessoaDto pessoa)
+        public IActionResult InserirPessoa([FromBody] PessoaCpfViewModel pessoaCpfViewModel)
         {
             try
             {
+                var pessoa = new Pessoa(
+                pessoaCpfViewModel.Nome,
+                pessoaCpfViewModel.Sobrenome,
+                pessoaCpfViewModel.CPF,
+                pessoaCpfViewModel.Salario
+                );
                 _inserirPessoaRepository.InserirPessoa(pessoa);
                 return Ok("Pessoa inserida com sucesso.");
             }

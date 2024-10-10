@@ -6,12 +6,12 @@ namespace Financa.Repositories
 {
     public class ConsultaPessoaPorCpfRepository
     {
-        public async Task<PessoaDto> GetPessoaAsync(string cpf)
+        public async Task<Pessoa> GetPessoaAsync(string cpf)
         {
             using (var connection = ConnectionSql.GetConnection())
             {
                 await connection.OpenAsync();
-                var result = await connection.QueryFirstOrDefaultAsync<PessoaDto>(
+                var result = await connection.QueryFirstOrDefaultAsync<Pessoa>(
                     "SELECT Nome, Sobrenome, CPF, Salario FROM Pessoa WHERE CPF = @cpf", new { cpf });
 
                 if (result == null)

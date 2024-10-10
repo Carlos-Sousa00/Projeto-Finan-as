@@ -1,11 +1,13 @@
 ﻿using Financa.Models;
 using Financa.Repositories;
+using Financa.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using static Financa.Models.Pessoa;
 
 namespace Financa.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class ConsultarPessoaCpfController : ControllerBase
@@ -19,11 +21,23 @@ namespace Financa.Controllers
 
         [HttpGet("{cpf}")]
         public async Task<IActionResult> GetPessoaPorCpf(string cpf)
-        {
+        {   
+            cpf = cpf.Replace("-","").Replace(".", "");
+
             try
             {
                 var pessoa = await _pessoaRepository.GetPessoaAsync(cpf);
-                return Ok(pessoa);
+
+
+                var pessoaCpfViewModel = new PessoaCpfViewModel
+                {
+                    Nome = pessoa.Nome,
+                    Sobrenome = pessoa.Sobrenome,
+                    CPF = pessoa.GetCpf(),  
+                    Salario = pessoa.GetSalario()  
+                };
+
+                return Ok(pessoaCpfViewModel);
             }
             catch (Pessoa.CpfNaoCadastradoException)
             {
