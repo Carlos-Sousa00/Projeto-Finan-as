@@ -85,4 +85,24 @@ public class PessoasController : ControllerBase
             return StatusCode(500, $"Erro interno: {ex.Message}");
         }
     }
+    [HttpDelete("{cpf}")]
+    public IActionResult DeletePessoa(string cpf)
+    {
+        try
+        {
+            var pessoa = new Pessoa();
+
+            _pessoaRepository.DeletarPessoa(cpf);
+
+            return Ok("Pessoa excluida com sucesso!");
+        }
+        catch (InvalidOperationException ex)
+        {
+            return NotFound(new { Message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { Message = "Ocorreu um erro ao excluir a pessoa.", Details = ex.Message });
+        }
+    }
 }

@@ -9,6 +9,11 @@
 
         public Pessoa() { }
 
+        public Pessoa(string cpf)
+        {
+            CPF = cpf;
+        }
+
         public Pessoa(string nome, string sobreNome, string cpf, float salario)
         {
             Nome = nome;

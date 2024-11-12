@@ -51,6 +51,24 @@ namespace Financa.Repositories
                 }
             }
         }
+        public void DeletarPessoa (string cpf)
+        {
+            using (var connection = ConnectionSql.GetConnection())
+            {
+                var pessoa = new Pessoa(cpf);
+                var pessoaExistente = connection.QueryFirstOrDefault<Pessoa>("SELECT * FROM Pessoa WHERE CPF = @Cpf", new {Cpf = pessoa.GetCpf()});
+                if (pessoaExistente != null)
+                {
+                    string sql = @"DELETE PESSOA WHERE CPF = @Cpf";
+
+                    connection.Execute(sql, new { Cpf = pessoa.GetCpf() });
+                }
+                else
+                {
+                    throw new InvalidOperationException("Pessoa com o CPF informado não foi encontrada.");
+                }
+            }
+        }
     }
 
 }
