@@ -31,4 +31,58 @@ public class PessoasController : ControllerBase
 
         return Ok(pessoasViewModel);
     }
+
+
+    [HttpGet("{cpf}")]
+    public async Task<IActionResult> GetPessoaPorCpf(string cpf)
+    {
+        cpf = cpf.Replace("-", "").Replace(".", "");
+
+        try
+        {
+            var pessoa = await _pessoaRepository.GetPessoaAsync(cpf);
+
+
+            var pessoaCpfViewModel = new PessoaCpfViewModel
+            {
+                Nome = pessoa.Nome,
+                Sobrenome = pessoa.Sobrenome,
+                CPF = pessoa.GetCpf(),
+                Salario = pessoa.GetSalario()
+            };
+
+            return Ok(pessoaCpfViewModel);
+        }
+        catch (Pessoa.CpfNaoCadastradoException)
+        {
+            return NotFound(new { Mensagem = $"CPF {cpf} não cadastrado." });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { Mensagem = "Erro interno no servidor.", Detalhes = ex.Message });
+        }
+    }
+    [HttpPost]
+    public IActionResult InserirPessoa([FromBody] PessoaCpfViewModel pessoaCpfViewModel)
+    {
+        try
+        {
+            var pessoa = new Pessoa(
+            pessoaCpfViewModel.Nome,
+            pessoaCpfViewModel.Sobrenome,
+            pessoaCpfViewModel.CPF,
+            pessoaCpfViewModel.Salario
+            );
+            _pessoaRepository.InserirPessoa(pessoa);
+            return Ok("Pessoa inserida com sucesso.");
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Erro interno: {ex.Message}");
+        }
+    }
 }

@@ -2,8 +2,6 @@ using Financa.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<InserirPessoaRepository>();
-builder.Services.AddScoped<ConsultaPessoaPorCpfRepository>();
 builder.Services.AddTransient<PessoaRepository>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
