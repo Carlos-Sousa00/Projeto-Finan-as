@@ -14,6 +14,12 @@
             CPF = cpf;
         }
 
+        public Pessoa(string cpf,float salario)
+        {
+            CPF = cpf;
+            Salario = salario;
+        }
+
         public Pessoa(string nome, string sobreNome, string cpf, float salario)
         {
             Nome = nome;

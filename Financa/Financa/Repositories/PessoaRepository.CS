@@ -69,6 +69,25 @@ namespace Financa.Repositories
                 }
             }
         }
+        public void AlterarPessoa(string cpf, float salario)
+        {
+            using (var connection = ConnectionSql.GetConnection())
+            {
+                var pessoa = new Pessoa(cpf,salario);
+                var pessoaExistente = connection.QueryFirstOrDefault<Pessoa>("SELECT * FROM Pessoa WHERE CPF = @Cpf", new { Cpf = pessoa.GetCpf() });
+                if (pessoaExistente != null)
+                {
+                    string sql = $"UPDATE PESSOA SET SALARIO = {pessoa.GetSalario()} WHERE CPF = '{pessoa.GetCpf()}'";
+
+                    connection.Execute(sql);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Pessoa com o CPF informado não foi encontrada.");
+                }
+            }
+        }
+
     }
 
 }

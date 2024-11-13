@@ -105,4 +105,25 @@ public class PessoasController : ControllerBase
             return StatusCode(500, new { Message = "Ocorreu um erro ao excluir a pessoa.", Details = ex.Message });
         }
     }
+    [HttpPut]
+    public IActionResult AlteraPessoa([FromBody] AlterarPessoaViewModel view )
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        try
+        {
+            _pessoaRepository.AlterarPessoa(view.cpf, view.salario);
+            return Ok($"Salário alterado com sucesso para {view.salario}.");
+        }
+        catch(InvalidOperationException ex)
+        {
+            return NotFound(new { Message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { Message = "Ocorreu um erro ao alterar o salário pessoa.", Details = ex.Message });
+        }
+    }
 }
