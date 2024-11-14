@@ -77,7 +77,7 @@ namespace Financa.Repositories
                 var pessoaExistente = connection.QueryFirstOrDefault<Pessoa>("SELECT * FROM Pessoa WHERE CPF = @Cpf", new { Cpf = pessoa.GetCpf() });
                 if (pessoaExistente != null)
                 {
-                    string sql = $"UPDATE PESSOA SET SALARIO = {pessoa.GetSalario()} WHERE CPF = '{pessoa.GetCpf()}'";
+                    string sql = $"UPDATE PESSOA SET SALARIO = REPLACE('{pessoa.GetSalario()}',',','.') WHERE CPF = '{pessoa.GetCpf()}'";
 
                     connection.Execute(sql);
                 }
