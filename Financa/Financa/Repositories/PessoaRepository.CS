@@ -37,18 +37,27 @@ namespace Financa.Repositories
         {
             using (var connection = ConnectionSql.GetConnection())
             {
-
-                if (CpfValidation.Validate(pessoa.GetCpf()))
+                
+                var pessoaExistente = connection.QueryFirstOrDefault<Pessoa>("SELECT * FROM Pessoa WHERE CPF = @Cpf", new { Cpf = pessoa.GetCpf() });
+                if (pessoaExistente == null)
                 {
-                    string sql = @"INSERT INTO Pessoa (Nome, Sobrenome, CPF, SALARIO)
+                    if (CpfValidation.Validate(pessoa.GetCpf()))
+                    {
+                        string sql = @"INSERT INTO Pessoa (Nome, Sobrenome, CPF, SALARIO)
                     VALUES (@Nome, @Sobrenome, REPLACE(REPLACE(@Cpf,'-',''),'.',''), @Salario)";
 
-                    connection.Execute(sql, new { pessoa.Nome, pessoa.Sobrenome, Cpf = pessoa.GetCpf(), Salario = pessoa.GetSalario() });
+                        connection.Execute(sql, new { pessoa.Nome, pessoa.Sobrenome, Cpf = pessoa.GetCpf(), Salario = pessoa.GetSalario() });
+                    }
+                    else
+                    {
+                        throw new ArgumentException("CPF inválido.");
+                    }
                 }
                 else
                 {
-                    throw new ArgumentException("CPF inválido.");
+                    throw new ArgumentException("CPF já foi cadastrado!");
                 }
+                
             }
         }
         public void DeletarPessoa (string cpf)
