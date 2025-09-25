@@ -1,4 +1,5 @@
 using Financa.Repositories;
+using SqlConnections.SqlConnections;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-Financa.ConnectionSqls.ConnectionSql.Configure(builder.Configuration);
+SqlConnections.SqlConnections.ConnectionSql.Configure(builder.Configuration);
 
 var app = builder.Build();
 

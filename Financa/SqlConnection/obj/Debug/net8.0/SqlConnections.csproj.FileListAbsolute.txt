@@ -1,0 +1,13 @@
+D:\ProjetoFinança\Financa\SqlConnection\bin\Debug\net8.0\SqlConnections.deps.json
+D:\ProjetoFinança\Financa\SqlConnection\bin\Debug\net8.0\SqlConnections.dll
+D:\ProjetoFinança\Financa\SqlConnection\bin\Debug\net8.0\SqlConnections.pdb
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.csproj.AssemblyReference.cache
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.AssemblyInfoInputs.cache
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.AssemblyInfo.cs
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.csproj.CoreCompileInputs.cache
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.sourcelink.json
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.dll
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\refint\SqlConnections.dll
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\SqlConnections.pdb
+D:\ProjetoFinança\Financa\SqlConnection\obj\Debug\net8.0\ref\SqlConnections.dll

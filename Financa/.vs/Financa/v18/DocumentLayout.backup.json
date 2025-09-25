@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProjetoFinan\u00E7a\\Financa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\sqlconnection\\connectionsqls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\sqlconnection\\connectionsqls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|d:\\projetofinan\u00E7a\\financa\\financa\\viewmodel\\alterarpessoaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F22DD1A-112E-4780-8A5B-55F0936FD4A6}|Financa\\Financa.csproj|solutionrelative:financa\\viewmodel\\alterarpessoaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE8A147-AD55-4F0E-8242-FBB6A0D0F327}|SqlConnection\\SqlConnections.csproj|d:\\projetofinan\u00E7a\\financa\\sqlconnection\\sqlconnections\\connectionsqls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE8A147-AD55-4F0E-8242-FBB6A0D0F327}|SqlConnection\\SqlConnections.csproj|solutionrelative:sqlconnection\\sqlconnections\\connectionsqls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\appsettings.json",
+              "RelativeDocumentMoniker": "Financa\\appsettings.json",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\appsettings.json",
+              "RelativeToolTip": "Financa\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-25T01:05:48.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Financa\\appsettings.Development.json",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\appsettings.Development.json",
+              "RelativeToolTip": "Financa\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-25T01:05:46.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConnectionSqls.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\SqlConnection\\SqlConnections\\ConnectionSqls.cs",
+              "RelativeDocumentMoniker": "SqlConnection\\SqlConnections\\ConnectionSqls.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\SqlConnection\\SqlConnections\\ConnectionSqls.cs",
+              "RelativeToolTip": "SqlConnection\\SqlConnections\\ConnectionSqls.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T00:54:56.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectionSqls.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\SqlConnection\\ConnectionSqls.cs",
+              "RelativeDocumentMoniker": "Financa\\SqlConnection\\ConnectionSqls.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\SqlConnection\\ConnectionSqls.cs",
+              "RelativeToolTip": "Financa\\SqlConnection\\ConnectionSqls.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T14:12:16.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Program.cs",
+              "RelativeDocumentMoniker": "Financa\\Program.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Program.cs",
+              "RelativeToolTip": "Financa\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T18:02:20.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PessoaController.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Controllers\\PessoaController.cs",
+              "RelativeDocumentMoniker": "Financa\\Controllers\\PessoaController.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Controllers\\PessoaController.cs",
+              "RelativeToolTip": "Financa\\Controllers\\PessoaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:53:43.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AlterarPessoaViewModel.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\ViewModel\\AlterarPessoaViewModel.cs",
+              "RelativeDocumentMoniker": "Financa\\ViewModel\\AlterarPessoaViewModel.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\ViewModel\\AlterarPessoaViewModel.cs",
+              "RelativeToolTip": "Financa\\ViewModel\\AlterarPessoaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T23:54:53.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pessoa.cs",
+              "DocumentMoniker": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Models\\Pessoa.cs",
+              "RelativeDocumentMoniker": "Financa\\Models\\Pessoa.cs",
+              "ToolTip": "D:\\ProjetoFinan\u00E7a\\Financa\\Financa\\Models\\Pessoa.cs",
+              "RelativeToolTip": "Financa\\Models\\Pessoa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T19:21:49.152Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

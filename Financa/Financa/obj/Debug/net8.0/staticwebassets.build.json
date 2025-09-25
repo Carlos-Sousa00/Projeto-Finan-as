@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "ytGm3ZZcYOCBdVlkWrcM9RBd9H9izpUT1Qk50Rm5hCc=",
-  "Source": "Financa",
-  "BasePath": "_content/Financa",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"rVLeKuu3qdI1LiyIGL/yFsOvv8VTy3cdhzCve0l2NK4=","Source":"Financa","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using DocumentValidator;
-using Financa.ConnectionSqls;
+using SqlConnections.SqlConnections;
 using Financa.Models;
 
 namespace Financa.Repositories
